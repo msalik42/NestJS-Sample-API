@@ -1,13 +1,13 @@
 {
     "version": 2,
     "builds": [
-      { "src": "dist/main.js", "use": "@vercel/node" }
+      { "src": "package.json", "use": "@vercel/static-build" }
     ],
     "routes": [
       { "src": "/(.*)", "dest": "dist/main.js" }
     ],
     "env": {
-      "YOUR_ENV_VARIABLE": "value"
+      "NODE_ENV": "production"
     }
   }
   
